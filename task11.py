@@ -8,6 +8,6 @@ df = pd.read_csv('tittanic2.csv')
 df.describe()
 
 # Количество пассажиров по классам
-sns.boxplot(df['Fare'])
-plt.title('Выбросы в Fare')
+sns.countplot(x='Pclass', data=df)
+plt.title('Количество пассажиров по классам')
 plt.show()
